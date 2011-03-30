@@ -1,0 +1,17 @@
+connect:
+  twitter:
+    key: "8spxJdonwNDQyxxTC6jkzA"
+    secret: "coj34oyp60KGpsnUUCfw5J7rg8IQMUm8kI0GNeRlOQ"
+    label: "Twitter"
+  facebook:
+    key: "my_key"
+    secret: "my_secret"
+    label: "Facebook"
+  google:
+    key: "my_key"
+    secret: "my_secret"
+    label: "Google"
+  yahoo:
+    key: "my_key"
+    secret: "my_secret"
+    label: "Yahoo"

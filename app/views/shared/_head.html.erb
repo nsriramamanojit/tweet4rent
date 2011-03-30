@@ -1,0 +1,27 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>LSSSA-Admin-<%=controller_name.titleize %></title>
+        <%= javascript_include_tag 'prototype','application','rails','controls','effects','dragdrop' %>
+        <%= stylesheet_link_tag 'admin_screen' %>
+        <%= csrf_meta_tag %>
+
+    </head>
+    <body id="store">
+        <div id="header">
+            <div id="welcome">
+                Welcome: <span id="welcome_username"><%=current_user.name %></span>
+                <span>!&nbsp;&nbsp;</span>
+                | <%=link_to 'Profile',:controller=>'/users',:action=>'show',:id=>current_user.id %>
+                | <%=link_to 'Logout',logout_path %>
+            </div>
+            <h3><%=link_to image_tag("adminlogo.png"),root_url %>
+            </h3>
+
+        </div>
+        <div id="tabs">
+            <ul>
+
+            </ul>
+        </div>
+

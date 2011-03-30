@@ -1,0 +1,4 @@
+<h1> Search Results</h1> for '<%= @search %>'<br/>
+<% (0..@result.length-1).each do |i| -%>
+	<%= @result[i]['doc']['city'] %>,<%= @result[i]['doc']['firstname'] %><br/>
+<% end -%> 

@@ -1,0 +1,63 @@
+<%= form_tag :action => 'create' %>
+<table align="center">
+<tr>
+
+ <td> <label>Service :</lable> </td>
+<td> <%= select_tag "service", options_for_select([ "BUY", "SALE","RENT", "LEASE"]) %></td>
+</tr>
+<tr>
+<td>     <label>Looking For :</lable></td>
+<td>     <%= select_tag "lookingfor", options_for_select([ "1 BHK", "2 BHK", "3 BHK", "Independent", "Villa","Duplex House", "Studio Apartment", "Shared Accomodation", "Paying Guest" ]) %></td>
+ </tr>
+<tr>   
+<td>     <label>City :</lable></td>
+<td>     <%= text_field_tag 'city' %></td>
+    </tr>
+<tr>
+<td>     <label>Location :</lable></td>
+ <td>    <%= text_field_tag 'location' %></td>
+   </tr>
+<tr>
+<td>     <label>Minimum Budget :</lable></td>
+<td>    <%= text_field_tag 'budgetmin' %></td>
+ </tr>
+<tr>   
+<td>     <label>Maximum Budget:</lable></td>
+ <td>    <%= text_field_tag 'budgetmax' %></td>
+    </tr>
+<tr>
+<td>     <label>Options :</lable></td>
+<td>      <%= select_tag "options", options_for_select([ "Car Parking", "Vaastu", "Lift", "24 Hour Water", "Walk to Work" ]) %></td>
+</tr>
+<tr>
+<td>     <label>First Name :</lable></td>
+<td>     <%= text_field_tag 'firstname' %></td>
+</tr>
+<tr>
+<td>     <label>Last Name :</lable></td>
+<td>     <%= text_field_tag 'lastname' %></td>
+</tr>
+<tr>
+<td>     <label>Email :</lable></td>
+<td>     <%= text_field_tag 'email' %></td>
+</tr>
+<tr>
+
+<td>     <label>Phone :</lable></td>
+<td>     <%= text_field_tag 'phone' %></td>
+
+</tr>
+<tr>
+ 
+<td>     <label>Mobile :</lable></td>
+ <td>    <%= text_field_tag 'mobile' %></td>
+
+</tr>
+<tr>
+
+  <td></td>
+<td>    <%= submit_tag 'Save' %></td>
+
+ </tr>
+ </table>
+<%= form_tag %>
