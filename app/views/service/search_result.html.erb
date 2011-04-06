@@ -1,4 +1,51 @@
-<h1> Search Results</h1> for '<%= @search %>'<br/>
+<h2> Search Results</h2> for '<%= @search.gsub("%20"," ") %>'<br/>
+<hr>
+<% if @result.length ==  0 %>
+<h2> No Results Found</h2>
+<% else %>
 <% (0..@result.length-1).each do |i| -%>
-	<%= @result[i]['doc']['city'] %>,<%= @result[i]['doc']['firstname'] %><br/>
+<table>
+<tr>
+<td>City:</td>
+<td><%= @result[i]['doc']['city'] %></td>	
+</tr>
+<tr>
+<td>Location:</td>
+<td><%= @result[i]['doc']['location'] %></td>	
+</tr>
+<tr>
+<td>First Name:</td>
+<td><%= @result[i]['doc']['firstname'] %></td>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td><%= @result[i]['doc']['lastname'] %></td>
+</tr>
+<tr>
+<td>Contact Number:</td>
+<td><%= @result[i]['doc']['phone'] %></td>
+</tr>
+<tr>
+<td>Mobile:</td>
+<td><%= @result[i]['doc']['mobile'] %></td>
+</tr>
+<tr>
+<td>Service:</td>
+<td><%= @result[i]['doc']['service'] %></td>
+</tr>
+<tr>
+<td>Type:</td>
+<td><%= @result[i]['doc']['lookingfor'] %></td>
+</tr>
+<tr>
+<td>Budget: (Min-Max)</td>
+<td><%= @result[i]['doc']['budgetmin'] %> - <%= @result[i]['doc']['budgetmax'] %></td>
+</tr>
+<tr>
+<td>Others:</td>
+<td><%= @result[i]['doc']['options'] %></td>
+</tr>
+</table>
+<hr>
 <% end -%> 
+<% end -%>

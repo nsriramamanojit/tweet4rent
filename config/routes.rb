@@ -11,7 +11,7 @@ Tweet4rent::Application.routes.draw do |map|
   map.resource :user_session
   
   match ':id' => 'users#show', :as => :profile
-  root :to => "user_sessions#new"
+  root :to => "service#new"
 
   match ':controller(/:action(/:id(.:format)))'
 end

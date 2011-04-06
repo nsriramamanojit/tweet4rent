@@ -37,8 +37,9 @@ class ServiceController < ApplicationController
 
     server = Couch::Server.new("localhost", "5984")
     res = server.post('//tweet4rent',@message.to_json)
-    
-    redirect_to :controller=>'service', :action=>'new'
+    puts res
+   
+    redirect_to :controller=>'service', :action=>'show'
     end
     
    end
@@ -47,8 +48,10 @@ class ServiceController < ApplicationController
    end
    
    def search_result
-	    @search = params[:query]
+	    @search = params[:query].to_s.gsub(' ','%20')
+	    puts @search
 	    url = '//tweet4rent/_fti/_design/search/city_location?q="'+@search+'"&include_docs=true'
+	    puts url
 	    server = Couch::Server.new("localhost", "5984")
 	    res = server.get(url)
 	    h1 = JSON.parse(res.body)
@@ -58,5 +61,8 @@ class ServiceController < ApplicationController
       end
    end
    
+   def show
+   
+   end
  
 end

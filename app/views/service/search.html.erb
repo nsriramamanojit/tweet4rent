@@ -1,10 +1,9 @@
+<h4 align="center">Enter word for Search</h2>
 <%= form_tag :action => 'search_result' %>
-<table>
+<table align="center">
 <tr>
 <td><lable>Search</lable></td>
 <td><%= text_field_tag 'query' %></td>
-</tr>
-<tr>
 <td><%= submit_tag 'Search' %></td>
 </tr>
 </table>

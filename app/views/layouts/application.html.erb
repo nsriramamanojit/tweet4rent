@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Tweet4rent</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<h2 align="center">Tweet4Rent</h2>
 <%= yield %>
-
+<table align="center">
+<tr><td><a href="/service/new">Home</a> | <a href="/service/search">Search </a> </td>
+</tr>
+</table>
 </body>
 </html>
